@@ -1,0 +1,15 @@
+{
+  "budget": 2,
+  "nodes": ["a", "b", "c", "d", "e"],
+  "node_error_code": "E_UNKNOWN_NODE",
+  "self_error_code": "E_SELF_DEP",
+  "event_error_code": "E_BAD_EVENT",
+  "state": { "deps": {}, "affected": [], "changed": [], "queue": [], "applied": [] },
+  "events": [
+    { "id": 1, "kind": "depend", "node": "b", "on": "a" },
+    { "id": 2, "kind": "depend", "node": "c", "on": "b" },
+    { "id": 3, "kind": "change", "node": "a" },
+    { "id": 4, "kind": "depend", "node": "d", "on": "a" },
+    { "id": 5, "kind": "change", "node": "e" }
+  ]
+}
